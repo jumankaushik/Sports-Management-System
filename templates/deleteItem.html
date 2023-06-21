@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inventory | Delete Item</title>
+    <link rel="stylesheet" href="/static/css/inventory/deleteItem/style.css">
+  </head>
+  <body>
+    <div class="heading"><h1>Delete Item</h1></div>
+    
+    <div class="container">
+      <form action="/deleteItem" method="POST">
+        <label for="item-id">Item ID</label>
+        <!-- <input type="text" id="item-id" name="itemid" required> -->
+        <select name="itemid"style="overflow-y: scroll;" required>
+          <option value="" disabled selected>Select Item ID</option>
+          {%for itemid in itemids%}
+          <option value="{{itemid}}">{{itemid}}</option>
+          {%endfor%}
+        </select>
+
+
+        <label for="sports-name">Sports Name</label>
+        <!-- <input type="text" id="sportsname" name="sportsname" required> -->
+        <select name="sportsname" style="overflow-y: scroll;" required>
+          <option value="" disabled selected>Select Sports Name</option>
+          {%for sportsname in sportsnames%}
+          <option value="{{sportsname}}">{{sportsname}}</option>
+          {%endfor%}
+        </select>
+
+
+        <label for="item-quantity">Quantity</label>
+        <input type="text" id="quantity" name="quantity" required>
+
+        <div class="buttons">
+          <button type="submit" class="btn issue-btn">Delete</button>
+          <a href="/inventory"><button type="button" class="btn back-btn">Back</button></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="item_warning"><h1 class="warning">
+      {% if info is defined %}
+      {{info}}
+      {%else%}
+      <div class="footer-identation"></div>
+    {% endif %}</h1>
+</div>
+
+  </body>
+</html>
+

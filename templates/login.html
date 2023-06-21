@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="/static/css/login/style.css">
+    </head>
+    <body>
+        <div class="background">
+        <div class="heading">
+            <p>SPORTS MANAGEMENT SYSTEM</p>
+        </div>
+        <div class="form_section">
+        <form class="form" action="/home" method="POST">
+            <p class = "form_group">
+                <label class = "form_label">Name: </label>
+                <input class= "form_input" type="name" name="username" required>
+            </p>
+            <p class = "form_group">
+                <label class = "form_label">Email:</label>
+                <input class= "form_input" type="email" name="email" required>
+            </p>
+            <p class = "form_group">
+                <label class = "form_label">Password:</label>
+                <input class= "form_input" type="password" name= "password" required>
+            </p>
+            <button class="button" type="submit" value="login">Login</button>
+        </form>
+    </div>
+        <div class="item_warning"><h1 class="warning">
+            {% if info is defined %}
+            {{info}}
+          {% endif %}</h1>
+        </div>
+    </div>
+    </body>
+</html>

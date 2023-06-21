@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Student Data</title>
+    <link rel="stylesheet" href="/static/css/addStudentData/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Student Data</h1>
+      <form action="/addStudentData" method="POST" enctype="multipart/form-data">
+        <label for="file-upload" class="file-upload-label">
+          <span>Choose a csv file..</span>
+          <input type="file" name="file" id="file-upload">
+        </label>
+        <button class="button" type="submit">Upload</button>
+      </form>
+      <p class="message">
+        {% if info is defined %}
+        {{info}}
+        {% endif %}</p>
+    </div>
+  </body>
+</html>

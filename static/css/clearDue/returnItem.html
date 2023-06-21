@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Issue Item</title>
+    {% if x % 2 == 0 %}
+        <link rel="stylesheet" href="/static/css/clearDue/style.css">
+    {% else %}
+      <link rel="stylesheet" href="/static/css/returnItem/style.css">
+    {% endif %}
+
+  </head>
+  <body>
+    <div class="heading"><h1>Return Sports Item</h1></div>
+    
+    <div class="container">
+      <form action="/returnItem" method="POST">
+        <label for="student-id">Student ID</label>
+        <input type="text" id="student-id" name="studentid" required>
+
+        <label for="student-roll-no">Item ID</label>
+        <input type="text" id="itemid" name="itemid" required>
+
+        <label for="sports-item-id">Sports Name</label>
+        <input type="text" id="sports-name" name="sportsname" required>
+
+        <div class="buttons">
+          <button type="submit" class="btn return-btn">Return</button>
+          <form action="/returnItem" method="GET">
+            <a href="/home"><button type="button" class="btn back-btn">Back</button></a>
+          </form>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="item_warning"><h1 class="warning">
+      {% if info is defined %}
+      {{info}}
+      {%else%}
+      <div class="footer-identation"></div>
+    {% endif %}</h1>
+</div>
+
+  </body>
+</html>
+

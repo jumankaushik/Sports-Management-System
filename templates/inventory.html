@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports Inventory</title>
+  <link rel="stylesheet" href="/static/css/inventory/style.css">
+</head>
+<body>
+
+  <div class="heading"><h1>SPORTS INVENTORY</h1></div>
+  <div class="buttons">
+    <a href="/addItem"><button class="add-btn" >Add</button></a>
+    <a href="/deleteItem"><button class="delete-btn">Delete</button></a>
+  </div>
+  <table>
+    <thead>
+            <tr>
+                
+                <th>Item ID</th>
+                <th>Sport Name</th>
+                <th>Quantity</th>
+                <th>Total Quantity</th>
+               
+                    <!-- <th class="act">Action</th> -->
+               
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in records %}
+        	<tr>
+            <!-- <td>{{ record[1] }}</td> -->
+            	<td>{{ record[0] }}</td>
+            	<td>{{ record[1] }}</td>
+              <td>{{ record[3] }}</td>
+            	<td>{{ record[2] }}</td>
+              <!-- <td>
+               
+              </td> -->
+        	</tr>
+        	{% endfor %}
+    </tbody>
+  </table>
+  </body>
+</html>

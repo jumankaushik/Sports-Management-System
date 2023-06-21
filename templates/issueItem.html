@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Issue Item</title>
+    <link rel="stylesheet" href="/static/css/issueItem/style.css">
+  </head>
+  <body>
+    <div class="heading"><h1>Issue Sports Item</h1></div>
+    
+    <div class="container">
+      <form action="/issueItem" method="POST">
+        <label for="student-id">Student ID</label>
+        <input type="text" id="student-id" name="studentid" placeholder="Enter Student ID" required>
+
+        <label for="student-roll-no">Item ID</label>
+        <!-- <input type="text" id="itemid" name="itemid" required> -->
+        <select name="itemid"style="overflow-y: scroll;" required>
+          <option value="" disabled selected>Select Item ID</option>
+          {%for itemid in itemids%}
+          <option value="{{itemid}}">{{itemid}}</option>
+          {%endfor%}
+        </select>
+        
+        
+        <label for="sports-item-id">Sports Name</label>
+        <!-- <input type="text" id="sports-name" name="sportsname" required> -->
+        <select name="sportsname" style="overflow-y: scroll;" required>
+          <option value="" disabled selected>Select Sports Name</option>
+          {%for sportsname in sportsnames%}
+          <option value="{{sportsname}}">{{sportsname}}</option>
+          {%endfor%}
+        </select>
+        
+        <div class="buttons">
+        <button type="submit" class="btn issue-btn">Issue</button>
+        <form action="/issueItem" method="GET">
+          <a href="/home"><button type="button" class="btn back-btn">Back</button></a>
+        </form>
+      </div>
+      </form>
+    </div>
+
+    <div class="item_warning"><h1 class="warning">
+      {% if info is defined %}
+      {{itemid}} {{info}}
+      {%else%}
+      <div class="footer-identation"></div>
+    {% endif %}</h1>
+</div>
+
+  </body>
+</html>
+

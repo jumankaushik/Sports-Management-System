@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Item Data</title>
+    <link rel="stylesheet" href="/static/css/inventory/addItem/style.css">
+  </head>
+  <body>
+    <div class="heading"><h1>Add Item</h1></div>
+    
+    <div class="container">
+      <form action="/addItem" method="POST">
+        <label for="item-id">Item ID</label>
+        <input type="text" id="item-id" name="itemid" required>
+
+        <label for="sports-name">Sports Name</label>
+        <input type="text" id="sportsname" name="sportsname" required>
+
+        <label for="item-quantity">Quantity</label>
+        <input type="text" id="quantity" name="quantity" required>
+
+        <div class="buttons">
+          <button type="submit" class="btn issue-btn">Add</button>
+          <a href="/inventory"><button type="button" class="btn back-btn" >Back</button></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="item_warning"><h1 class="warning">
+      {% if info is defined %}
+      {{info}}
+      {%else%}
+      <div class="footer-identation"></div>
+      {% endif %}</h1>
+</div>
+
+  </body>
+</html>
+

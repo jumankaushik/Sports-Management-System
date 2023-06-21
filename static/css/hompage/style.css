@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+
+}
+
+html{
+    height: 100%;
+}
+body{
+    
+    box-sizing: border-box;
+}
+body {
+    
+    color: #eee;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(badminton_bg.jpg);
+    font-family: Arial, sans-serif;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    background-size: cover;
+    
+    /* background-position: center; */
+    background-repeat: no-repeat;  
+    margin: 0 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #e4dbdb; */
+    /* color: black; */
+    padding: 10px 20px;
+    margin-bottom: 70px;
+    margin-top: 15px;
+}
+
+/* .background{
+    height: 100%;
+      
+} */
+.logo-heading{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.logo-userid{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+.hansraj-logo{
+    height: 100px;
+    width: 100px;
+}
+
+.user-logo{
+    height: 80px;
+    width: 80px;
+}
+.header-left{
+    user-select: none;
+    pointer-events: none;
+    font-size: 38px;
+}
+
+.header-right{
+    padding-left: 15px;
+    display: inline;
+}
+
+/* .logo-heading{ */
+    /* display: flex; */
+/* } */
+.admin-heading {
+    user-select: none;
+    pointer-events: none;
+    display:inline; 
+    position:absolute;
+    /* display: flex; */
+    top:170px;
+    left: 390px; 
+    text-align: center;
+    font-size: 24px;
+    /* margin-top: 200px; */
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.container {
+    display:inline;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 80vh; */
+    margin:0%;
+    margin-bottom: 132px;
+    
+}
+
+.button-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border:2px solid rgb(255, 255, 255);
+    /* border-radius: 10px; */
+    width: 66%;
+    height: 300px;
+    padding: 20px;
+    margin-top: 50px;
+}
+button:hover{
+    /* color: #357737; */
+    color: rgb(168, 109, 0);
+    font-weight:bold;
+}
+button:active{
+    background-color: rgb(168, 109, 0);
+    /* background-color: #4CAF50; */
+    color: white;
+}
+
+.button {
+    border-radius: 8px;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    /* background-color: #4CAF50; */
+    /* background-color: #555505; */
+    background-color: rgb(247, 161, 0);
+    box-shadow:0 0 8px rgb(0, 0, 0);
+    color:white;
+    /* font-weight: bold; */
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+p{
+    user-select: none;
+    pointer-events: none;
+}

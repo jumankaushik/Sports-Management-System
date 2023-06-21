@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+tr:hover {
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+}
+
+.heading{
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+  
+html{
+    height: 100%; 
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(badminton_bg.jpg);
+    
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-position: center; */
+    /* background-position: center; */
+    background-repeat: no-repeat;    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  

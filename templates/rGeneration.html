@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report Generation</title>
+	<link rel="stylesheet" href="/static/css/reportgeneration/style.css">
+</head>
+<body>
+	<div class="background">
+
+	<div class="heading"><h1>REPORT GENERATION</h1></div>
+	<table>
+		<thead>
+			<tr>
+				<th>SID</th>
+				<th>Name</th>
+				<th>Course</th>
+				<th>Year</th>
+				<th>Item ID</th>
+				<th>Sports Name</th>
+				<th>Status</th>
+				<th>Date</th>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tbody>
+            	{% for record in records %}
+            	<tr>
+                {% for value in record %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            	</tr>
+        	{% endfor %}
+		</tbody>
+	</table>
+</body>
+</div>
+</html>
